@@ -1,1 +1,1 @@
-web: sh -c "cd Student/Student && gunicorn Student.wsgi"
+web: sh -c "cd Student && gunicorn Student.wsgi"
