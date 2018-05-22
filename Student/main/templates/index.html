@@ -1,0 +1,64 @@
+<!-- {% load staticfiles %} -->
+
+{% include 'header.html' %}
+    <nav class="navbar navbar-static-top">
+    <!-- <div class='container text-center'> -->
+      <a href='https://www.tamu.edu/'>
+        <img src="{% static 'tamu_icon.png' %}" height="80"/>
+      </a>
+    <!-- </div> -->
+    </nav>
+
+	<div class='container'>
+		<h3>Student List</h3>
+  </div>
+	<div class='container text-center'>
+    <div class = 'row'>
+			{% for person in student %}
+			<div class='col-md-4'>
+				<section>
+					<p class='person'>Name: {{person.name}} </p>
+					<p class='person'>UIN: {{person.uin}} </p>
+					<!-- <p class='person'>Year: {{person.year}} </p> -->
+				</section>
+			</div>
+			{% endfor %}
+		</div>
+  </div>
+
+<div class='container text-right'>
+ <button type = 'button'><a href = 'add.html'>Add a student</a></button>
+</div>
+<br>
+<div class='container text-right'>
+ <button type = 'button'><a href = 'del.html'>Delete a student</a></button>
+</div>
+<br>
+
+	</div>
+
+  <div class='container text-center'>
+    <div class='row'>
+      <div class='col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0'>
+        <i class='glyphicon glyphicon-briefcase '></i>
+        <h3>Join TAMU</h3>
+        <p>Texas A&M opened its doors in 1876 as the state's first public institution of higher learning. Today, we stand as a research-intensive flagship university dedicated to sending Aggie leaders out into the world prepared to take on the challenges of tomorrow.</p>
+      </div>
+
+      <div class='col-sm-4 col-xs-6'>
+        <i class='glyphicon glyphicon-random'></i>
+        <h3>Welcome to Aggieland</h3>
+        <p>Located in the heart of the Houston-Dallas-Austin triangle, within a two-hour drive of 26 million of the state’s 28 million residents, Texas A&M's main campus in College Station is home to more than 62,500 students. Another 5,700 are at the branch campuses in Galveston and Qatar and other locations across Texas.</p>
+      </div>
+
+      <div class='col-sm-4 col-xs-6'>
+        <i class='glyphicon glyphicon-send'></i>
+        <h3>Academic Programs</h3>
+        <p>With more than 130 undergraduate degree programs, 170 master's degree programs, 93 doctoral degree programs and 5 first professional degrees as options for study, Texas A&M is full of possibilities.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+	 // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <script src="bootstrap.js></script> -->
+{% include 'footer.html' %}

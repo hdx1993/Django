@@ -1,0 +1,29 @@
+{% include 'header.html' %}
+
+<br>
+<div class = 'container'>
+<h3>Add or delete a student</h3>
+<!-- </div> -->
+
+<div class = 'container text-center'>
+<form action= '#' method = 'POST'>
+{% csrf_token %}
+  <label for = 'name'>Name: </label>
+  <input type='text' name = 'name_text' id='name'/>
+
+  <label for = 'uin'>UIN: </label>
+  <input type='text' name = 'uin_text' id='uin'/>
+
+  <label for = 'year'>Year: </label>
+  <input type='text' name = 'year_text' id='year'/>
+
+  <input type = 'submit' value = 'Add'>
+  <input type = 'submit' value = 'Delete'>
+  <button>Output</button>
+</form>
+</div>
+<br>
+
+
+		
+{% include 'footer.html' %}

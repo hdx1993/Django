@@ -1,0 +1,53 @@
+/* main.css */
+
+body {
+  background-color: white;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 0;
+  margin: 0 auto;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+  min-width: 290px;
+  border-radius: 3px;
+  background-color: #DCDCDC;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 10px 10px 10px;
+}
+
+img {
+  /*border-radius: 80px;*/
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.7em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.person {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.col-sm-4 p {
+  font-size: 16px;
+}
