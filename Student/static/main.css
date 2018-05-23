@@ -12,10 +12,15 @@ main {
   margin: 0 auto;
 }
 
+button {
+  color:black;
+}
+
 section {
   padding: 0;
   margin: 0;
   min-width: 290px;
+  min-height: 120px;
   border-radius: 3px;
   background-color: #DCDCDC;
   text-align: center;
@@ -25,6 +30,7 @@ section {
 
 img {
   /*border-radius: 80px;*/
+  /*display: none;*/
   width: 100%;
 }
 
@@ -48,6 +54,17 @@ h3 {
   margin: 0;
 }
 
-.col-sm-4 p {
-  font-size: 16px;
+.row .slidedown {
+  /*color: gray;*/
+  display: none;
+}
+
+.detail .clickhere{
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+.detail .uin {
+  padding: 0;
+  display: none;
 }
