@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from .models import Students
 from django.http import HttpResponseRedirect  
 from django.shortcuts import render, redirect
-
+import os
 # Create your views here.
 def index(request):
 	allstudents = Students.objects.all()
@@ -29,9 +29,16 @@ def del_students(request):
 		del_person.delete()
 		return HttpResponseRedirect('/')
 	else:
-		return render(request, 'add.html')
+		return render(request, 'delete.html')
 
-
+def output(request):
+	MYDIR = os.path.dirname(__file__)
+	allstudents = Students.objects.all()
+	with open('/Users/huangyian/Desktop/student_list.txt', 'w') as f:
+		for stu in allstudents:
+			f.write(stu.name);
+			f.write('\n')
+	return render(request, 'student_list.html', {'student_list': allstudents})
 # class Stu:
 # 	def __init__(self, name, uin, year):
 # 		self.name = name

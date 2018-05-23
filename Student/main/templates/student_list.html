@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+<!-- {% load staticfiles %} -->
+
+<nav class="navbar navbar-static-top">
+    <!-- <div class='container text-center'> -->
+      <a href='https://www.tamu.edu/'>
+        <img src="{% static 'tamu_icon.png' %}" height="80"/>
+      </a>
+    <!-- </div> -->
+    </nav>
+<div class='container text-center'>
+	<h3> Student List: </h3>
+</div>
+<ul>
+	<div class = 'container'>
+		<div class = 'row'>
+			{% for student in student_list %}
+			<div class = 'col-md-3'>
+				<li> Name: {{student.name}} </li>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</ul>
+
+
+
+{% include 'footer.html' %}

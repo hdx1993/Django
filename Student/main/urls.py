@@ -5,5 +5,5 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^add', views.add_students, name='add'),
     url(r'^del', views.del_students, name='del'),
-
+    url(r'^student_list', views.output, name='output')
 ]
